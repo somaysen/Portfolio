@@ -1,11 +1,13 @@
 import Navber from "./components/Navber"
+import About from "./pages/About"
 import Home from "./pages/Home"
 
 function App() {
   return (
     <div className=' '>
-      <Navber/>
+      {/* <Navber/> */}
       <Home/>
+      <About/>
     </div>
   )
 }
