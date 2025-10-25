@@ -25,16 +25,21 @@ function About() {
             {/* about me context div - Full width on mobile/tablet, 60% on desktop */}
             <div className="w-full lg:w-[60%] p-5 h-full flex justify-between flex-col gap-10" >
 
-                <div className="flex items-center justify-end p-5">
-                    <h1
-                        className="text-6xl tracking-tighter mr-40 font-[system-ui] font-[350]
-                        text-blue-600 underline decoration-2 underline-offset-[12px]
-                        decoration-blue-500 drop-shadow-[0_4px_6px_rgba(37,99,235,0.4)]
-                        hover:decoration-blue-700 hover:text-blue-700 transition-all duration-300"
-                    >
-                        About me
-                    </h1>
+               <div className="flex items-center justify-end p-5">
+                <h1
+                    className="
+                    text-6xl font-semibold tracking-tight text-blue-600
+                    underline decoration-[1.5px] underline-offset-[14px]
+                    drop-shadow-[0_3px_5px_rgba(37,99,235,0.35)]
+                    hover:text-blue-700 hover:decoration-blue-700
+                    transition-all duration-300 ease-in-out
+                    mr-20 lg:mr-40
+                    "
+                >
+                    About me
+                </h1>
                 </div>
+
 
                 <div className="text-contenar flex flex-col gap-2 mt-5 font-[350] tracking-wide" >
                     <p>I'm a passionate web developer based in Indonesia with a strong foundation in both frontend and backend technologies. My journey in web development started 3 years ago, and I've been constantly learning and adapting to new technologies ever since.</p>

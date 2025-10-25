@@ -35,9 +35,9 @@ function Home() {
             ].map((stat, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center flex-col border-2 p-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-zinc-400/30 hover:border-zinc-200 hover:scale-105"
+                className="flex items-center  justify-center flex-col border-2 p-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-zinc-400/30 hover:border-zinc-200 hover:scale-105"
               >
-                <span className="font-bold text-xl pb-2">{stat.number}</span>
+                <span className="font-extrabold text-blue-500 text-2xl pb-2">{stat.number}</span>
                 <span className="text-[16px] sm:text-[18px] text-center">
                   {stat.label}
                 </span>
@@ -47,7 +47,7 @@ function Home() {
 
           {/* Buttons */}
           <div className="flex flex-wrap justify-start gap-4 items-center">
-            <button className="border-2 border-blue-500 text-blue-500 rounded-3xl px-5 py-2 flex items-center gap-2 transition-all duration-300 hover:bg-blue-500 hover:text-white hover:shadow-lg hover:shadow-blue-400/40 hover:scale-105">
+            <button className="border-2 bg-blue-500 text-black border-blue-500  rounded-3xl px-5 py-2 flex items-center gap-2 transition-all duration-300 hover:bg-blue-500 hover:text-white hover:shadow-lg hover:shadow-blue-400/40 hover:scale-105">
               <span>Hire Me</span>
               <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
             </button>
