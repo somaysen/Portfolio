@@ -29,7 +29,7 @@ function About() {
                 <h1
                     className="
                     text-6xl font-semibold tracking-tight text-blue-600
-                    underline decoration-[1.5px] underline-offset-[14px]
+                    underline decoration-[1.5px] underline-offset-(14px)
                     drop-shadow-[0_3px_5px_rgba(37,99,235,0.35)]
                     hover:text-blue-700 hover:decoration-blue-700
                     transition-all duration-300 ease-in-out
