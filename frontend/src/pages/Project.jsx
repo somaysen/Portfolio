@@ -74,11 +74,12 @@ function Project() {
     </h1>
 
 
+     {/* contect */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-[90%] max-w-[1200px] justify-items-center">
         {cardData.map((item) => (
           <div
             key={item.id}
-            className="relative group w-[320px] h-[380px] bg-[#1a1a1a] border border-transparent hover:border-blue-600 rounded-2xl 
+            className="relative group w-[320px] h-[380px] bg-[#1a1a1a] border border-transparent hover:border-blue-300/50 rounded-2xl 
                        flex flex-col overflow-hidden transition-all hover:scale-[1.03] duration-300 shadow-lg hover:shadow-blue-800/40"
           >
             {/* Image Section */}
