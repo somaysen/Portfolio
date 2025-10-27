@@ -68,7 +68,7 @@ export const cardData = [
 
 function Project() {
   return (
-    <section className="w-full min-h-screen flex flex-col items-center py-12">
+    <section className="w-full flex justify-center items-center flex-col py-16 bg-zinc-50 dark:bg-zinc-900 transition-colors duration-500">
     <h1 className="text-4xl font-bold text-blue-500 underline decoration-blue-300 decoration-2 underline-offset-4 mb-12">
       Featured Projects
     </h1>

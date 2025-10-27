@@ -8,16 +8,16 @@ function Navbar() {
   const navLinks = ["home", "about", "skills", "services", "projects", "contact"];
 
   return (
-    <div className="bg-black/50 w-full h-16 flex justify-between items-center px-6 md:px-10 border-b border-zinc-800 shadow-lg fixed top-0 left-0 z-50">
+    <div className="bg-black/40 w-full h-16 flex justify-between items-center px-6 md:px-10 border-b border-zinc-800 shadow-lg fixed top-0 left-0 z-50">
       {/* Logo */}
       <span className="text-2xl font-semibold tracking-wide text-gray-100 dark:text-black hover:text-blue-500 dark:hover:text-blue-400 transition-all duration-300">
-        Somay_coder
+        The_coder
         <span className="text-blue-600 dark:text-blue-400">.</span>
       </span>
 
 
       {/* Desktop Nav */}
-      <div className="hidden md:flex items-center justify-evenly p-2 text-white text-lg w-[40%] rounded-full bg-gray-400/40">
+      <div className="hidden md:flex items-center justify-evenly p-2 text-white text-lg w-[50%] rounded-full bg-gray-400/40">
         {navLinks.map((section) => (
           <Link
             key={section}
@@ -26,7 +26,8 @@ function Navbar() {
             duration={500}
             offset={-70}
             spy={true} // 👈 enables scroll spy feature
-            activeClass="text-black  bg-blue-400 p-1 border-transparent rounded-2xl  font-semibold" // 👈 active section styling
+            activeClass="text-black bg-blue-400 px-4 py-1 border-transparent rounded-3xl font-bold text-lg shadow-md"
+ // 👈 active section styling
             className="cursor-pointer transition-all duration-50 tracking-tighter hover:text-black"
           >
             {section.charAt(0).toUpperCase() + section.slice(1)}

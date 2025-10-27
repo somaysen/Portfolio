@@ -8,23 +8,23 @@ const contactData = [
     id: 1,
     icon: <MdEmail />,
     title: "Email",
-    value: "abcd@gmail.com",
+    value: "somaysen656@gmail.com",
     linkText: "Send Email",
-    linkHref: "mailto:abcd@gmail.com",
+    linkHref: "mailto:somaysen656@gmail.com",
   },
   {
     id: 2,
     icon: <FaPhoneAlt />,
     title: "Phone",
-    value: "+221 00 11 22 33 44",
+    value: "+91 9617388656",
     linkText: "Call Now",
-    linkHref: "tel:+2210011223344",
+    linkHref: "tel:+91 9617388656",
   },
   {
     id: 3,
     icon: <FaLocationDot />,
     title: "Location",
-    value: "Boudouaou, Boumerdes, Algerire",
+    value: "Bhopal, MP, INDIA",
     linkText: "View on map",
     linkHref: "https://www.google.com/maps",
   },
@@ -32,17 +32,17 @@ const contactData = [
     id: 4,
     icon: <FaWhatsapp />,
     title: "WhatsApp",
-    value: "+00 11 22 33 44",
+    value: "+91 9617388656",
     linkText: "Send Message",
-    linkHref: "https://wa.me/0011223344",
+    linkHref: "https://wa.me/9617388656",
   },
 ];
 
 function Contact() {
   return (
-    <section className="w-full min-h-screen flex flex-col items-center justify-between">
+    <section className="w-full flex justify-center items-center flex-col py-16 bg-zinc-50 dark:bg-zinc-900 transition-colors duration-500">
       {/* Header */}
-      <div className="w-full p-6 text-center text-3xl font-semibold underline underline-offset-8 decoration-blue text-blue-500 bg-white">
+      <div className="w-full p-6 text-center text-3xl font-semibold underline underline-offset-8 decoration-blue text-blue-500 ">
   Get in Touch
 </div>
 

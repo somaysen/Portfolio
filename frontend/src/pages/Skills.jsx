@@ -9,7 +9,7 @@ import { TbBrandReactNative } from "react-icons/tb";
 
 function Skills() {
   return (
-    <section className="w-full p-10 flex justify-center items-center ">
+    <section className="w-full flex justify-center items-center flex-col py-16 bg-zinc-50 dark:bg-zinc-900 transition-colors duration-500">
   <div className="w-[90%] flex flex-col gap-10 items-center">
 
     <h1 className="text-5xl font-bold text-blue-500 underline underline-offset-8 decoration-2 text-center">

@@ -52,7 +52,7 @@ export const whatIDoData = [
 
 function WhatIDo() {
   return (
-    <section className="w-full min-h-screen flex justify-center items-center py-16 px-4 ">
+   <section className="w-full flex justify-center items-center flex-col py-16 bg-zinc-50 dark:bg-zinc-900 transition-colors duration-500">
       <div className="w-[90%] max-w-7xl flex flex-col justify-center items-center gap-14">
         
         {/* Title */}

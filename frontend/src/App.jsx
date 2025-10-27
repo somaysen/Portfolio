@@ -24,7 +24,3 @@ function App() {
 
 export default App 
 
-// import { FaGithub } from "react-icons/fa";
-// <FaGithub />
-// import { RiExternalLinkFill } from "react-icons/ri";
-// <RiExternalLinkFill />
