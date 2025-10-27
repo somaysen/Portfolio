@@ -10,12 +10,14 @@ function App() {
   return (
     <div className=' '>
       <Navber/>
-      <Home/>
-      <About/>
-      <Skills/>
-      <WhatIDo/>
-      <Project/>
-      <Contact/>
+
+      <section id="home" ><Home/></section>
+      <section id="about" ><About/></section>
+      <section id="skills"><Skills /></section>
+      <section id="services"><WhatIDo /></section>
+      <section id="projects"><Project /></section>
+      <section id="contact"><Contact /></section>
+
     </div>
   )
 }

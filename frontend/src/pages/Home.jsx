@@ -4,7 +4,7 @@ import { FaWhatsapp, FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa"
 
 function Home() {
   return (
-    <section className="w-full min-h-screen flex justify-center items-center px-5 py-10 bg-zinc-50">
+    <section className="w-full min-h-screen flex justify-center items-center pt-25 px-5 py-10 bg-zinc-50">
       <div className="w-full max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-10">
         {/* LEFT SECTION - TEXT */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center">
