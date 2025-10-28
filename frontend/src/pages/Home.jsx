@@ -82,14 +82,17 @@ function Home() {
         {/* LEFT SECTION */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center">
           <div>
-            <div className="text-lg sm:text-xl">👋 Hello there!</div>
+            <div className="text-lg text-white sm:text-xl">👋 Hello there!</div>
 
             <h1
               ref={headingRef}
-              className="hero-title text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight mt-2"
+              className="hero-title text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl
+                font-bold tracking-tight mt-2
+                text-zinc-900 dark:text-zinc-50 transition-colors duration-500"
             >
-              I'm <span className="text-blue-400">Somay</span>
+              I'm <span className="text-blue-600 dark:text-blue-400 transition-colors duration-500">Somay</span>
             </h1>
+
 
             <h2
               ref={targetRef}
@@ -113,16 +116,24 @@ function Home() {
               { number: "10+", label: "Happy Clients" },
             ].map((stat, index) => (
               <div
-                key={index}
-                className="flex items-center justify-center flex-col border-2 p-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-zinc-400/30 dark:hover:shadow-zinc-700/40 hover:border-zinc-200 hover:scale-105"
-              >
-                <span className="font-extrabold text-blue-500 text-2xl pb-2">
-                  {stat.number}
-                </span>
-                <span className="text-[16px] sm:text-[18px] text-center">
-                  {stat.label}
-                </span>
-              </div>
+              key={index}
+              className="flex items-center justify-center flex-col
+                border-2 border-blue-500 dark:border-blue-400
+                p-6 rounded-xl
+                transition-all duration-300
+                hover:shadow-lg hover:shadow-zinc-300/40 dark:hover:shadow-zinc-900/40
+                hover:border-zinc-300 dark:hover:border-blue-300
+                hover:scale-105"
+            >
+              <span className="font-extrabold text-blue-600 dark:text-blue-400 text-2xl pb-2 transition-colors duration-300">
+                {stat.number}
+              </span>
+              
+              <span className="text-[16px] text-zinc-700 dark:text-zinc-200 font-medium sm:text-[18px] text-center transition-colors duration-300">
+                {stat.label}
+              </span>
+            </div>
+
             ))}
           </div>
 
@@ -151,40 +162,32 @@ function Home() {
           <div className="flex justify-start gap-3 pt-6 items-center">
             <a
               href="https://wa.me/9617388656"
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="WhatsApp"
-              className="border-2 border-gray-100 bg-[#212121] p-2 rounded-xl flex items-center transition-all duration-300 hover:bg-green-400 hover:shadow-lg hover:shadow-green-400/40 dark:hover:shadow-green-500/40 hover:scale-110"
+              className="border-2 border-gray-100/40 bg-[#212121] p-2 rounded-2xl flex items-center transition-all duration-300 hover:bg-green-400 hover:shadow-lg hover:shadow-green-400/40 hover:scale-110"
             >
               <FaWhatsapp className="text-xl text-white" />
             </a>
 
             <a
               href="https://www.linkedin.com/in/somay-sen-535143294"
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="border-2 border-gray-100 bg-[#212121] p-2 rounded-xl flex items-center transition-all duration-300 hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-400/40 dark:hover:shadow-blue-500/40 hover:scale-110"
+              className="border-2 border-gray-100/40 bg-[#212121] p-2 rounded-2xl flex items-center transition-all duration-300 hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-400/40 hover:scale-110"
             >
               <FaLinkedinIn className="text-xl text-white" />
             </a>
 
             <a
               href="https://github.com/somaysen"
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="GitHub"
-              className="border-2 border-gray-100 bg-[#212121] p-2 rounded-xl flex items-center transition-all duration-300 hover:bg-zinc-700 hover:shadow-lg hover:shadow-zinc-500/40 dark:hover:shadow-zinc-600/40 hover:scale-110"
+              className="border-2 border-gray-100/40 bg-[#212121] p-2 rounded-2xl flex items-center transition-all duration-300 hover:bg-zinc-700 hover:shadow-lg hover:shadow-zinc-500/40 hover:scale-110"
             >
               <FaGithub className="text-xl text-white" />
             </a>
 
             <a
               href="https://www.instagram.com/somay__96"
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="Instagram"
-              className="border-2 border-gray-100 bg-[#212121] p-2 rounded-xl flex items-center transition-all duration-300 hover:bg-gradient-to-tr hover:from-[#feda75] hover:via-[#d62976] hover:to-[#833ab4] hover:shadow-lg hover:shadow-pink-500/40 dark:hover:shadow-pink-600/40 hover:scale-110"
+              className="border-2 border-gray-100/40 bg-[#212121] p-2 rounded-2xl flex items-center transition-all duration-300 hover:bg-gradient-to hover:from-[#feda75] hover:via-[#d62976] hover:to-[#833ab4] hover:shadow-lg hover:shadow-pink-500/40 hover:scale-110"
             >
               <FaInstagram className="text-xl text-white" />
             </a>
@@ -195,7 +198,14 @@ function Home() {
         <div className="w-full lg:w-1/2 flex justify-center items-center">
           <div
             ref={imageRef}
-            className="relative w-[250px] sm:w-[300px] md:w-[350px] lg:w-[400px] h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] rounded-2xl overflow-hidden group transition-all duration-500 shadow-[0_40px_2px_rgba(255,255,255,0.2)] hover:shadow-[0_0_35px_5px_rgba(255,255,255,0.2)]"
+            className="relative
+              w-[250px] sm:w-[300px] md:w-[350px] lg:w-[400px]
+              h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px]
+              rounded-2xl overflow-hidden group
+              transition-all duration-500
+              shadow-[0_0_30px_3px_rgba(255,255,255,0.2)]
+              hover:shadow-[0_0_45px_10px_rgba(255,255,255,0.3)]
+            "
           >
             <img
               src="https://github.com/Saboo24/modern-portfolio-website/blob/main/protfile/images/img.jpg?raw=true"
@@ -204,6 +214,7 @@ function Home() {
             />
           </div>
         </div>
+
       </div>
     </section>
   );

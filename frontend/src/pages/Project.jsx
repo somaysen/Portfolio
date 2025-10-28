@@ -112,11 +112,11 @@ function Project() {
             </div>
 
             {/* Content Section */}
-            <div className="p-3 flex flex-col justify-between flex-grow">
-              <h2 className="text-lg font-semibold text-white">{item.title}</h2>
-              <p className="text-gray-400 text-sm mt-2 leading-relaxed flex-grow">
-                {item.description}
-              </p>
+            <div className="p-3 flex flex-col justify-between">
+            <h2 className="text-lg font-semibold text-white">{item.title}</h2>
+            <p className="text-gray-400 text-sm mt-2 leading-relaxed flex">
+              {item.description}
+            </p>
 
               {/* Skills */}
               <div className="flex flex-wrap gap-2 mt-3">

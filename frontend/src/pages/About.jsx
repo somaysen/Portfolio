@@ -78,17 +78,21 @@ function About() {
   // Download CV function
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/SomaySen_CV.pdf"; // Place CV file in public folder
+    link.href = "https://ik.imagekit.io/wcerfpt9sm/Resume%20-%20SomaySen2-1.pdf?updatedAt=1761325820381"; // Place CV file in public folder
     link.download = "Somay_Sen_CV.pdf";
     link.click();
   };
 
   return (
-    <section className="w-full flex justify-center items-center flex-col py-16 bg-zinc-50 dark:bg-zinc-900 transition-colors duration-500">
+    <section className="w-full flex justify-center items-center flex-col  bg-zinc-50 dark:bg-zinc-900 transition-colors duration-500">
       <div className="w-[85%] flex flex-col lg:flex-row justify-center items-center gap-10">
         {/* Image Section */}
         <div className="hidden lg:flex w-[40%] items-center justify-center">
-          <div className="relative w-[400px] h-[500px] rounded-2xl overflow-hidden group shadow-[0_40px_2px_rgba(255,255,255,0.2)] hover:shadow-[0_0_35px_5px_rgba(255,255,255,0.2)] transition-all duration-500">
+          <div className="relative w-[400px] h-[500px] rounded-2xl overflow-hidden group
+            shadow-[0_0_35px_2px_rgba(255,255,255,0.2)]
+            hover:shadow-[0_0_45px_8px_rgba(255,255,255,0.3)]
+            transition-all duration-500">
+            
             <img
               src="https://github.com/Saboo24/modern-portfolio-website/blob/main/protfile/images/img.jpg?raw=true"
               alt="Profile"
@@ -97,17 +101,23 @@ function About() {
           </div>
         </div>
 
-        {/* About Content */}
-        <div className="w-full lg:w-[60%] flex flex-col gap-10">
-          {/* Title */}
-          <div className="flex items-center justify-end p-5">
+
+          {/* About Content */}
+          <div className="w-full lg:w-[60%] flex flex-col gap-10">
+            {/* Title */}
+          <div className="flex items-center justify-center p-5">
             <h2
               ref={headingRef}
-              className="text-5xl md:text-6xl font-semibold tracking-tight text-blue-600 dark:text-blue-400 underline decoration-[1.5px] underline-offset-[14px] drop-shadow-[0_3px_5px_rgba(37,99,235,0.35)] hover:text-blue-700 hover:decoration-blue-700 transition-all duration-300 ease-in-out mr-10 lg:mr-20"
+              className="text-5xl md:text-6xl font-semibold tracking-tight text-blue-600 dark:text-blue-400 
+              underline decoration-2 underline-offset-[1vw]
+              drop-shadow-[0_3px_5px_rgba(37,99,235,0.35)]
+              hover:text-blue-700 hover:decoration-blue-700
+              transition-all duration-300 ease-in-out mr-10 lg:mr-20"
             >
               About Me
             </h2>
           </div>
+
 
           {/* Description */}
           <div
