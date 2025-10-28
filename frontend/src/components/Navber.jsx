@@ -33,7 +33,7 @@ function Navbar() {
             {section.charAt(0).toUpperCase() + section.slice(1)}
           </Link>
         ))}
-      </div>
+      </div>jj
 
       {/* Mobile Menu Icon */}
       <div

@@ -2,9 +2,10 @@ import Navber from "./components/Navber"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
 import Home from "./pages/Home"
+import Project from "./pages/Project"
 import Skills from "./pages/Skills"
 import WhatIDo from "./pages/WhatIDo"
-import Project from "./pages/project"
+
 
 function App() {
   return (
