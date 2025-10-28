@@ -114,7 +114,7 @@ function Contact() {
           <form
             ref={formRef}
             onSubmit={handleSubmit(onSubmit)}
-            className="w-[90%] sm:w-[70%] md:w-[60%] lg:w-[60%] xl:w-[50%] flex flex-col border-2 border-zinc-400 p-8 rounded-2xl bg-zinc-900 gap-6 font-semibold text-lg shadow-md"
+            className="w-[90%] sm:w-[70%] md:w-[60%] lg:w-[60%] xl:w-[50%] flex flex-col border-2 border-zinc-400 p-8 rounded-2xl bg-zinc-300/50 gap-6 font-semibold text-lg shadow-md"
           >
             
             <input
