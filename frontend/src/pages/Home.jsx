@@ -9,53 +9,58 @@ function Home() {
   const targetRef = useRef(null);
   const imageRef = useRef(null);
 
-  // ✅ GSAP Animations
+  // ✅ GSAP Animations with Cleanup
   useLayoutEffect(() => {
-    const tl = gsap.timeline();
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline();
 
-    if (headingRef.current && targetRef.current && imageRef.current) {
-      const words = headingRef.current.querySelectorAll("span");
+      if (headingRef.current && targetRef.current && imageRef.current) {
+        const words = headingRef.current.querySelectorAll("span");
 
-      tl.fromTo(
-        words,
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1.5,
-          ease: "power3.out",
-          stagger: 0.2,
-        }
-      )
-        .fromTo(
-          targetRef.current,
-          { opacity: 0, y: 50 },
+        tl.fromTo(
+          words,
+          { opacity: 0, y: 30 },
           {
             opacity: 1,
             y: 0,
             duration: 1.5,
-            ease: "bounce.out",
-          },
-          "+=0.3"
-        )
-        .fromTo(
-          imageRef.current,
-          { opacity: 0, scale: 0.8, y: 60 },
-          {
-            opacity: 1,
-            scale: 1,
-            y: 0,
-            duration: 0.5,
             ease: "power3.out",
-          },
-          "-=0.5"
-        );
-    }
+            stagger: 0.2,
+          }
+        )
+          .fromTo(
+            targetRef.current,
+            { opacity: 0, y: 50 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 1.5,
+              ease: "bounce.out",
+            },
+            "+=0.3"
+          )
+          .fromTo(
+            imageRef.current,
+            { opacity: 0, scale: 0.8, y: 60 },
+            {
+              opacity: 1,
+              scale: 1,
+              y: 0,
+              duration: 0.5,
+              ease: "power3.out",
+            },
+            "-=0.5"
+          );
+      }
+    });
+
+    return () => ctx.revert(); // ✅ Cleanup for React strict mode
   }, []);
 
-  // ✅ Download CV Function
+  // ✅ Download CV
   const DownloadCV = () => {
-    const fileUrl = "/SomaySen_CV.pdf"; // place PDF in public/
+    const fileUrl =
+      "https://ik.imagekit.io/wcerfpt9sm/Resume%20-%20SomaySen2-1.pdf?updatedAt=1761325820381";
     const fileName = "SomaySen_CV.pdf";
 
     const link = document.createElement("a");
@@ -66,10 +71,15 @@ function Home() {
     document.body.removeChild(link);
   };
 
+  // ✅ Smooth scroll to contact section
+  const scrollToContact = () => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section className="w-full min-h-screen flex justify-center items-center pt-22 px-5 py-10 bg-zinc-50 dark:bg-zinc-900">
+    <section className="w-full min-h-screen flex justify-center items-center px-5 py-10 lg:py-20 bg-zinc-50 dark:bg-zinc-900">
       <div className="w-full max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-10">
-        {/* LEFT SECTION - TEXT */}
+        {/* LEFT SECTION */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center">
           <div>
             <div className="text-lg sm:text-xl">👋 Hello there!</div>
@@ -90,13 +100,12 @@ function Home() {
               <span className="inline-block">Developer</span>
             </h2>
 
-
             <p className="text-base sm:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
               I'm Somay, a passionate Full-Stack Web Developer who loves building interactive and efficient digital experiences. I specialize in both frontend and backend development using the MERN stack, and enjoy transforming complex ideas into elegant, scalable solutions. Combining creativity with strong technical skills in Java, C, and modern web technologies, I aim to craft software that’s not just functional — but meaningful and impactful.
             </p>
           </div>
 
-          {/* Stats */}
+          {/* STATS */}
           <div className="hero-stats grid grid-cols-1 sm:grid-cols-3 gap-4 pt-7 mt-5 mb-10">
             {[
               { number: "20+", label: "Projects Completed" },
@@ -105,7 +114,7 @@ function Home() {
             ].map((stat, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center flex-col border-2 p-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-zinc-400/30 hover:border-zinc-200 hover:scale-105"
+                className="flex items-center justify-center flex-col border-2 p-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-zinc-400/30 dark:hover:shadow-zinc-700/40 hover:border-zinc-200 hover:scale-105"
               >
                 <span className="font-extrabold text-blue-500 text-2xl pb-2">
                   {stat.number}
@@ -117,52 +126,65 @@ function Home() {
             ))}
           </div>
 
-          {/* Buttons */}
+          {/* BUTTONS */}
           <div className="flex flex-wrap justify-start gap-4 items-center">
-            <button className="group border-2 bg-blue-500 text-black border-blue-500 rounded-3xl px-5 py-2 flex items-center gap-2 transition-all duration-300 hover:bg-blue-600 hover:text-white hover:shadow-lg hover:shadow-blue-400/40 hover:scale-105">
+            <button
+              onClick={scrollToContact}
+              aria-label="Hire Somay for a project"
+              className="group border-2 bg-blue-500 text-black border-blue-500 rounded-3xl px-5 py-2 flex items-center gap-2 transition-all duration-300 hover:bg-blue-600 hover:text-white hover:shadow-lg hover:shadow-blue-400/40 dark:hover:shadow-blue-500/40 hover:scale-105"
+            >
               <span>Hire Me</span>
               <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
             </button>
 
             <button
               onClick={DownloadCV}
-              className="border-2 border-blue-500 text-blue-500 rounded-3xl px-5 py-2 flex items-center gap-2 transition-all duration-300 hover:bg-blue-500 hover:text-white hover:shadow-lg hover:shadow-blue-400/40 hover:scale-105"
+              aria-label="Download Somay's CV"
+              className="border-2 border-blue-500 text-blue-500 rounded-3xl px-5 py-2 flex items-center gap-2 transition-all duration-300 hover:bg-blue-500 hover:text-white hover:shadow-lg hover:shadow-blue-400/40 dark:hover:shadow-blue-500/40 hover:scale-105"
             >
               <IoMdDownload />
               <span>Download CV</span>
             </button>
           </div>
 
-          {/* Social Links */}
+          {/* SOCIAL LINKS */}
           <div className="flex justify-start gap-3 pt-6 items-center">
             <a
               href="https://wa.me/9617388656"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="WhatsApp"
-              className="border-2 border-gray-100 bg-[#212121] p-2 rounded-xl flex items-center transition-all duration-300 hover:bg-green-400 hover:shadow-lg hover:shadow-green-400/40 hover:scale-110"
+              className="border-2 border-gray-100 bg-[#212121] p-2 rounded-xl flex items-center transition-all duration-300 hover:bg-green-400 hover:shadow-lg hover:shadow-green-400/40 dark:hover:shadow-green-500/40 hover:scale-110"
             >
               <FaWhatsapp className="text-xl text-white" />
             </a>
 
             <a
               href="https://www.linkedin.com/in/somay-sen-535143294"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="border-2 border-gray-100 bg-[#212121] p-2 rounded-xl flex items-center transition-all duration-300 hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-400/40 hover:scale-110"
+              className="border-2 border-gray-100 bg-[#212121] p-2 rounded-xl flex items-center transition-all duration-300 hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-400/40 dark:hover:shadow-blue-500/40 hover:scale-110"
             >
               <FaLinkedinIn className="text-xl text-white" />
             </a>
 
             <a
               href="https://github.com/somaysen"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="GitHub"
-              className="border-2 border-gray-100 bg-[#212121] p-2 rounded-xl flex items-center transition-all duration-300 hover:bg-zinc-700 hover:shadow-lg hover:shadow-zinc-500/40 hover:scale-110"
+              className="border-2 border-gray-100 bg-[#212121] p-2 rounded-xl flex items-center transition-all duration-300 hover:bg-zinc-700 hover:shadow-lg hover:shadow-zinc-500/40 dark:hover:shadow-zinc-600/40 hover:scale-110"
             >
               <FaGithub className="text-xl text-white" />
             </a>
 
             <a
               href="https://www.instagram.com/somay__96"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
-              className="border-2 border-gray-100 bg-[#212121] p-2 rounded-xl flex items-center transition-all duration-300 hover:bg-gradient-to-tr hover:from-[#feda75] hover:via-[#d62976] hover:to-[#833ab4] hover:shadow-lg hover:shadow-pink-500/40 hover:scale-110"
+              className="border-2 border-gray-100 bg-[#212121] p-2 rounded-xl flex items-center transition-all duration-300 hover:bg-gradient-to-tr hover:from-[#feda75] hover:via-[#d62976] hover:to-[#833ab4] hover:shadow-lg hover:shadow-pink-500/40 dark:hover:shadow-pink-600/40 hover:scale-110"
             >
               <FaInstagram className="text-xl text-white" />
             </a>
