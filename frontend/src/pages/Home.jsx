@@ -77,10 +77,10 @@ function Home() {
   };
 
   return (
-    <section className="w-full min-h-screen flex justify-center items-center px-5 py-10 lg:py-20 bg-zinc-50 dark:bg-zinc-900">
+    <section className="w-full min-h-screen flex justify-center items-center px-5 py-20 lg:py-20 bg-zinc-50 dark:bg-zinc-900">
       <div className="w-full max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-10">
         {/* LEFT SECTION */}
-        <div className="w-full lg:w-1/2 flex flex-col justify-center">
+        <div className="w-full lg:w-1/2  flex flex-col justify-center">
           <div>
             <div className="text-lg text-white sm:text-xl">👋 Hello there!</div>
 
