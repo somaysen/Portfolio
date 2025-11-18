@@ -71,7 +71,7 @@ const skillCards = [
     title: "Frontend Development",
     skills: [
       { icon: FaHtml5, name: "HTML5", level: "90%" },
-      { icon: FaCss3, name: "CSS3", level: "85%" },
+      { icon: FaCss3, name: "CSS3", level: "95%" },
       { icon: FaJs, name: "JavaScript", level: "80%" }
     ]
   },
@@ -79,23 +79,23 @@ const skillCards = [
     title: "Backend Development",
     skills: [
       { icon: FaNodeJs, name: "Node.js", level: "80%" },
-      { icon: FaPython, name: "Python", level: "75%" },
-      { icon: SiExpress, name: "Express", level: "75%" }
+      { icon: FaPython, name: "Python", level: "50%" },
+      { icon: SiExpress, name: "Express", level: "85%" }
     ]
   },
   {
     title: "Database Management",
     skills: [
       { icon: DiMongodb, name: "MongoDB", level: "90%" },
-      { icon: GrMysql, name: "MySQL", level: "85%" },
-      { icon: DiPostgresql, name: "PostgreSQL", level: "80%" }
+      { icon: GrMysql, name: "MySQL", level: "30%" },
+      { icon: DiPostgresql, name: "PostgreSQL", level: "20%" }
     ]
   },
   {
     title: "DevOps & Tools",
     skills: [
       { icon: FaGitAlt, name: "Git", level: "75%" },
-      { icon: FaDocker, name: "Docker", level: "70%" },
+      { icon: FaDocker, name: "Docker", level: "20%" },
       { icon: VscCode, name: "VS Code", level: "90%" }
     ]
   },
@@ -104,15 +104,15 @@ const skillCards = [
     skills: [
       { icon: FaFigma, name: "Figma", level: "90%" },
       { icon: IoPhonePortraitSharp, name: "Responsive", level: "85%" },
-      { icon: AiOutlineBgColors, name: "Adobe XD", level: "80%" }
+      { icon: AiOutlineBgColors, name: "Adobe XD", level: "30%" }
     ]
   },
   {
     title: "React Native",
     skills: [
       { icon: TbBrandReactNative, name: "React Native", level: "80%" },
-      { icon: FaAndroid, name: "Android", level: "75%" },
-      { icon: FaApple, name: "iOS", level: "75%" }
+      { icon: FaAndroid, name: "Android", level: "15%" },
+      { icon: FaApple, name: "iOS", level: "5%" }
     ]
   }
 ];

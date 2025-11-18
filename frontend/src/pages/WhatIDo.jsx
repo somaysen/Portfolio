@@ -14,13 +14,13 @@ export const whatIDoData = [
     description: "I create responsive, modern websites using the latest technologies. From concept to deployment, performance and quality come first.",
     skills: ["Responsive Design", "Performance Optimized", "SEO Friendly"]
   },
-  {
-    id: 2,
-    title: "Mobile Development",
-    icon: <FaMobileScreenButton />,
-    description: "Building cross-platform applications for both Android and iOS, optimized for performance and user experience.",
-    skills: ["Cross-Platform", "Native Performance", "User-Friendly"]
-  },
+  // {
+  //   id: 2,
+  //   title: "Mobile Development",
+  //   icon: <FaMobileScreenButton />,
+  //   description: "Building cross-platform applications for both Android and iOS, optimized for performance and user experience.",
+  //   skills: ["Cross-Platform", "Native Performance", "User-Friendly"]
+  // },
   {
     id: 3,
     title: "UI/UX Design",
@@ -28,20 +28,20 @@ export const whatIDoData = [
     description: "Crafting intuitive and beautiful designs with focus on usability, accessibility, and overall experience.",
     skills: ["User-Centered", "Modern Design", "Accessibility"]
   },
-  {
-    id: 4,
-    title: "Performance Optimization",
-    icon: <FaRocket />,
-    description: "Optimizing websites and applications for speed, scalability, and reliability. I ensure your digital products perform at their best under any conditions.",
-    skills: ["Fast Loading", "Scalable", "Reliable"]
-  },
-  {
-    id: 5,
-    title: "E-commerce Solutions",
-    icon: <FaShoppingCart />,
-    description: "Building secure and efficient e-commerce platforms that drive sales and provide excellent shopping experiences for your customers.",
-    skills: ["Secure Payments", "Inventory Management", "Analytics"]
-  },
+  // {
+  //   id: 4,
+  //   title: "Performance Optimization",
+  //   icon: <FaRocket />,
+  //   description: "Optimizing websites and applications for speed, scalability, and reliability. I ensure your digital products perform at their best under any conditions.",
+  //   skills: ["Fast Loading", "Scalable", "Reliable"]
+  // },
+  // {
+  //   id: 5,
+  //   title: "E-commerce Solutions",
+  //   icon: <FaShoppingCart />,
+  //   description: "Building secure and efficient e-commerce platforms that drive sales and provide excellent shopping experiences for your customers.",
+  //   skills: ["Secure Payments", "Inventory Management", "Analytics"]
+  // },
   {
     id: 6,
     title: "API Development",

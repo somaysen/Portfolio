@@ -78,7 +78,7 @@ function About() {
   // Download CV function
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "https://ik.imagekit.io/wcerfpt9sm/Resume%20-%20SomaySen2-1.pdf?updatedAt=1761325820381"; // Place CV file in public folder
+    link.href = "https://ik.imagekit.io/6gdfaaf6z/SomaySen_CV%20(2).pdf"; // Place CV file in public folder
     link.download = "Somay_Sen_CV.pdf";
     link.click();
   };

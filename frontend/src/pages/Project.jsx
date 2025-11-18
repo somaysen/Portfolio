@@ -1,5 +1,5 @@
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import image from "../components/Cleveroad.jpg";
+import image from "../components/PeerLink.png";
 import phone from "../components/Task manager app.jpg";
 import Weather from "../components/Weather Forecast Dashboard.jpg";
 import pf from "../components/pf.png";
@@ -10,12 +10,12 @@ export const cardData = [
   {
     id: 1,
     image,
-    title: "E-commerce Platform",
+    title: "Local-comunication",
     description:
-      "A full-stack e-commerce solution built with React, Node.js, and MongoDB.",
-    skills: ["React", "Node.js", "MongoDB", "Stripe"],
-    github: "https://github.com/example/ecommerce",
-    live: "https://example.com/ecommerce",
+      "It Frontend project beasd on comunication like chat and video coll ",
+    skills: ["React", "Peer.js"],
+    github: "https://github.com/somaysen/PeerLink",
+    live: "https://peer-link-z1g8.vercel.app/",
   },
   {
     id: 2,
@@ -43,8 +43,8 @@ export const cardData = [
     title: "Portfolio Website",
     description: "Responsive and animated portfolio to showcase work.",
     skills: ["HTML", "CSS3", "JavaScript", "GSAP"],
-    github: "https://github.com/example/portfolio",
-    live: "https://example.com/portfolio",
+    github: "https://github.com/somaysen/Portfolio",
+    live: "https://stately-bombolone-90ee2d.netlify.app/",
   },
   {
     id: 5,
