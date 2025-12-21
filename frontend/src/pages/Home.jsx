@@ -60,7 +60,7 @@ function Home() {
   // ✅ Download CV
   const DownloadCV = () => {
     const fileUrl =
-      "https://ik.imagekit.io/6gdfaaf6z/SomaySen_CV%20(2).pdf";
+      "https://ik.imagekit.io/wcerfpt9sm/SomaySen%20resume(CV).pdf";
     const fileName = "SomaySen_CV.pdf";
 
     const link = document.createElement("a");
