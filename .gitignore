@@ -6,3 +6,10 @@
 ./frontend/.DS_Store
 ./frontend/.idea/
 ./frontend/.vscode/
+.env
+
+# Ignore environment files
+.env.local
+.env.*
+frontend/.env.local
+frontend/.env.*

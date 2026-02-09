@@ -85,7 +85,7 @@ function About() {
 
   return (
     <section className="w-full flex justify-center items-center flex-col  bg-zinc-50 dark:bg-zinc-900 transition-colors duration-500">
-      <div className="w-[85%] flex flex-col lg:flex-row justify-center items-center gap-10">
+      <div className="w-[85%] flex flex-col lg:flex-row justify-center items-center gap-10 relative ">
         {/* Image Section */}
         <div className="hidden lg:flex w-[40%] items-center justify-center">
           <div className="relative w-[400px] h-[500px] rounded-2xl overflow-hidden group
@@ -98,6 +98,9 @@ function About() {
               alt="Profile"
               className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
             />
+          </div>
+          <div className="w-30 h-35 rounded-xl  bg-[#1eb0d7] absolute bottom-35 left-85 flex flex-col items-center justify-center">
+            <h1>2+</h1><br /> <h1>Years</h1> <h1>Experience</h1>  
           </div>
         </div>
 
