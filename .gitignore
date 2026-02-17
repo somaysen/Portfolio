@@ -6,6 +6,7 @@
 ./frontend/.DS_Store
 ./frontend/.idea/
 ./frontend/.vscode/
+frontend/.git_submodule_backup/
 .env
 
 # Ignore environment files
